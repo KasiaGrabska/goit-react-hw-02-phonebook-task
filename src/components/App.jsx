@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ContactForm } from './ContactForm';
 import { ContactList } from './ContactList';
 import { Filter } from './Filter';
+
 export const App = () => {
   const [contacts, setContacts] = useState([
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },

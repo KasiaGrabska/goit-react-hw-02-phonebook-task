@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from '../styles.css/app.module.css';
 import { ContactForm } from './ContactForm';
 import { ContactList } from './ContactList';
 import { Filter } from './Filter';
@@ -38,7 +39,7 @@ export const App = () => {
       <ContactForm addContact={addContact} />
 
       <h2>Contacts</h2>
-      <div>Find contacts by name</div>
+      <div className={styles.findContactsDiv}>Find contacts by name</div>
       <Filter filter={filter} setFilter={setFilter} />
       <ContactList contacts={filteredContacts} deleteContact={deleteContact} />
     </div>

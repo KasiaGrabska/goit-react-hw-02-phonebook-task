@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
+import styles from '../styles.css/contactForm.module.css';
 
 export const ContactForm = ({ addContact }) => {
   const [name, setName] = useState('');
@@ -17,7 +18,7 @@ export const ContactForm = ({ addContact }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <div>Name</div>
         <input
           type="text"

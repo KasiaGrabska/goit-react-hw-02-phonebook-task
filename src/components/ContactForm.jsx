@@ -43,6 +43,7 @@ export const ContactForm = ({ addContact }) => {
           <button type="submit">Add Contact</button>
         </div>
       </form>
+      <span></span>
     </>
   );
 };

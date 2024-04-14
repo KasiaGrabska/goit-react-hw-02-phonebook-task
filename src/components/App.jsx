@@ -38,6 +38,7 @@ export const App = () => {
       <ContactForm addContact={addContact} />
 
       <h2>Contacts</h2>
+      <div>Find contacts by name</div>
       <Filter filter={filter} setFilter={setFilter} />
       <ContactList contacts={filteredContacts} deleteContact={deleteContact} />
     </div>

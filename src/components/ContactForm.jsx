@@ -16,28 +16,32 @@ export const ContactForm = ({ addContact }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Name may contain only letters, apostrophe, dash and spaces."
-        placeholder="Name"
-        value={name}
-        onChange={event => setName(event.target.value)}
-        required
-      />
-      <input
-        type="tel"
-        name="number"
-        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-        placeholder="Phone Number"
-        value={number}
-        onChange={event => setNumber(event.target.value)}
-        required
-      />
-      <button type="submit">Add Contact</button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <div>Name</div>
+        <input
+          type="text"
+          name="name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces."
+          value={name}
+          onChange={event => setName(event.target.value)}
+          required
+        />
+        <div>Number</div>
+        <input
+          type="tel"
+          name="number"
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          value={number}
+          onChange={event => setNumber(event.target.value)}
+          required
+        />
+        <div>
+          <button type="submit">Add Contact</button>
+        </div>
+      </form>
+    </>
   );
 };
